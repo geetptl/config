@@ -73,15 +73,18 @@ input "type:touchpad" {
     bindsym $mod+Shift+q kill
 
     # Start your launcher
-    bindsym $mod+d exec $menu
+    bindsym $mod1+d exec $menu
 
     # Applications
+    bindsym $mod1+t exec $term
     bindsym $mod1+b exec blueman-manager
     bindsym $mod1+f exec firefox
     bindsym $mod1+p exec "firefox --private-window"
     bindsym $mod1+Shift+p exec "firefox -profile $(mktemp -d) --private-window"
     bindsym $mod1+r exec "$term ranger ~"
     bindsym $mod1+v exec "rofi -modi clipboard:/usr/local/bin/cliphist-rofi-img -show clipboard -show-icons"
+    bindsym $mod1+q exec qbittorrent
+
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
