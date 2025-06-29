@@ -13,7 +13,6 @@
         "pulseaudio",
         "network",
         "custom/sysinfo",
-        //"backlight",
         "battery"
         //"custom/power"
     ],
