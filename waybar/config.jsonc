@@ -1,7 +1,6 @@
 // -*- mode: jsonc -*-
 {
-    "height": 20, // Waybar height (to be removed for auto height)
-    "spacing": 0, // Gaps between modules (4px)
+    "height": 25,
     "modules-left": [
         "sway/workspaces",
         "sway/window"
@@ -14,8 +13,11 @@
         "network",
         "custom/sysinfo",
         "battery"
-        //"custom/power"
     ],
+    "sway/window": {
+        "format": "{}",
+        "tooltip": false
+    },
     "clock": {
         "format": "{:%A %I:%M %p}",
         "format-alt": "{:%d %B %Y (W%V)}",
@@ -27,14 +29,8 @@
         "interval": 5,
         "return-type": "text"
     },
-    "backlight": {
-        // "device": "acpi_video1",
-        "format": "{icon} {percent}%",
-        "format-icons": ["🌑", "🌘", "🌗", "🌖", "🌕"]
-    },
     "battery": {
         "states": {
-            // "good": 95,
             "warning": 30,
             "critical": 15
         },
@@ -54,10 +50,9 @@
       "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
       "tooltip-format-disconnected": "Disconnected",
       "interval": 3,
-      "on-click": "kitty -e nmcli"
+      "on-click": "kitty -e sh -c 'nmcli device; exec bash'"
     },
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
