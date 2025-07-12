@@ -75,6 +75,9 @@ input "type:touchpad" {
     # Start your launcher
     bindsym $mod1+d exec $menu
 
+    # Power script
+    bindsym $mod+Shift+p exec ~/.config/sway/powermenu.sh
+
     # Applications
     bindsym $mod1+t exec $term
     bindsym $mod1+b exec blueman-manager
