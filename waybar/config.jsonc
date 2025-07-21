@@ -2,8 +2,8 @@
 {
     "height": 25,
     "modules-left": [
-        "sway/workspaces",
-        "sway/window"
+        "sway/workspaces"
+        //"sway/window"
     ],
     "modules-center": [
         "clock"
@@ -19,7 +19,7 @@
         "tooltip": false
     },
     "clock": {
-        "format": "{:%A %I:%M %p}",
+        "format": "{:%A %I:%M %p | %d %B %Y (W%V)}",
         "format-alt": "{:%d %B %Y (W%V)}",
         "tooltip": false
     },
