@@ -81,7 +81,7 @@ input "type:touchpad" {
 
     # Applications
     bindsym $mod1+t exec $term
-    bindsym $mod1+b exec blueman-manager
+    bindsym $mod1+b exec pavucontrol
     bindsym $mod1+f exec firefox
     bindsym $mod1+p exec "firefox --private-window"
     bindsym $mod1+Shift+p exec "firefox -profile $(mktemp -d) --private-window"
@@ -225,7 +225,9 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
     # Special key to take a screenshot with grim
-    bindsym Print exec grim
+    bindsym $mod+p       exec grimshot savecopy active
+    bindsym $mod+$mod1+p  exec grimshot savecopy output
+    bindsym $mod+Ctrl+p  exec grimshot savecopy window
 
 #
 # Status Bar:
@@ -251,11 +253,11 @@ bindsym $mod+r mode "resize"
 #     }
 # }
 
-#target                 $title  $bg $text   $indicator  $border
-client.focused          $lavender   $base $text   $lavender    $lavender
-client.focused_inactive $overlay0  $base $text   $rosewater    $rosewater
-client.unfocused        $overlay0  $base $text   $overlay1    $overlay1
-client.urgent           $peach   $base $peach   $red    $red
-client.placeholder      $overlay0   $base $peach   $overlay2    $overlay2
+#target                 $title      $bg     $text   $indicator  $child_border
+client.focused          $lavender   $base   $text   $lavender   $lavender
+client.focused_inactive $overlay0   $base   $text   $rosewater  $overlay0
+client.unfocused        $overlay0   $base   $text   $overlay1   $overlay1
+client.urgent           $peach      $base   $peach  $red        $red
+client.placeholder      $overlay0   $base   $peach  $overlay2   $overlay2
 client.background       $base
 include /etc/sway/config.d/*

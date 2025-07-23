@@ -20,14 +20,14 @@
     },
     "clock": {
         "format": "{:%A %I:%M %p | %d %B %Y (W%V)}",
-        "format-alt": "{:%d %B %Y (W%V)}",
         "tooltip": false
     },
     "custom/sysinfo": {
         "format": "{}",
         "exec": "~/.config/waybar/scripts/sysinfo.sh",
         "interval": 5,
-        "return-type": "text"
+        "return-type": "text",
+        "tooltip": false
     },
     "battery": {
         "states": {
@@ -50,7 +50,7 @@
       "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
       "tooltip-format-disconnected": "Disconnected",
       "interval": 3,
-      "on-click": "kitty -e sh -c 'nmcli device; cd ~; exec bash'"
+      "on-click": "kitty -e sh -c 'cd ~; nmcli device; exec bash'"
     },
     "pulseaudio": {
         "format": "{volume}% {icon} {format_source}",
