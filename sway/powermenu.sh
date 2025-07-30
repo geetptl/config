@@ -1,18 +1,18 @@
 #!/bin/bash
 
 # Options
-options="Lock\nLogout\nReboot\nShutdown"
+options="lock\nlogout\nreboot\nshutdown"
 
 # Rofi command
 choice=$(echo -e "$options" | rofi -dmenu -p "Power Menu")
 
 case "$choice" in
-  Lock)
+  lock)
     swaylock ;;
-  Logout)
+  logout)
     swaymsg exit ;;
-  Reboot)
+  reboot)
     systemctl reboot ;;
-  Shutdown)
+  shutdown)
     systemctl poweroff ;;
 esac
