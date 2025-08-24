@@ -49,6 +49,7 @@ output * bg ~/Pictures/cool.jpg fill
 # resumed. It will also lock your screen before your computer goes to sleep.
 exec waybar
 exec "wl-paste --watch cliphist store"
+exec dunst
 ### Input configuration
 #
 # Example configuration:
