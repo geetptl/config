@@ -254,11 +254,11 @@ bindsym $mod+r mode "resize"
 #     }
 # }
 
-#target                 $title      $bg     $text   $indicator  $child_border
-client.focused          $lavender   $base   $text   $lavender   $lavender
-client.focused_inactive $overlay0   $base   $text   $rosewater  $overlay0
-client.unfocused        $overlay0   $base   $text   $overlay1   $overlay1
-client.urgent           $peach      $base   $peach  $red        $red
-client.placeholder      $overlay0   $base   $peach  $overlay2   $overlay2
+#target                 $title      $bg     $text       $indicator  $child_border
+client.focused          $lavender   $base   $text       $lavender   $overlay0
+client.focused_inactive $overlay0   $base   $text       $rosewater  $overlay0
+client.unfocused        $overlay0   $base   $subtext1   $overlay1   $overlay1
+client.urgent           $peach      $base   $peach      $red        $red
+client.placeholder      $overlay0   $base   $peach      $overlay2   $overlay2
 client.background       $base
 include /etc/sway/config.d/*
