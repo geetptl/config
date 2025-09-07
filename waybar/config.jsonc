@@ -50,7 +50,7 @@
       "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
       "tooltip-format-disconnected": "Disconnected",
       "interval": 3,
-      "on-click": "kitty -e sh -c 'cd ~; nmcli device; exec bash'"
+      "on-click": "kitty -d ~ bash -c 'nmcli device; exec bash'"
     },
     "pulseaudio": {
         "format": "{volume}% {icon} {format_source}",
