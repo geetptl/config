@@ -27,7 +27,7 @@ set $menu "rofi -show combi -modes combi -combi-modes 'window,run'"
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/Pictures/cool.jpg fill
+output * bg ~/.config/wallpapers/cat-vibin.png fill
 #
 # Example configuration:
 #

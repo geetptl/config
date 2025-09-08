@@ -19,7 +19,7 @@
         "tooltip": false
     },
     "clock": {
-        "format": "{:%A %I:%M %p | %d %B %Y (W%V)}",
+        "format": "{:%I:%M %p | %A, %d %B %Y (W%V)}",
         "tooltip": false
     },
     "custom/sysinfo": {
