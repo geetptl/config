@@ -1,6 +1,6 @@
 CONFIG="$HOME/.config/"
 
-dirs=("sway" "swaylock" "nvim" "rofi" "waybar" "ranger" "kitty" "dunst" "wallpapers")
+dirs=("bash" "sway" "swaylock" "nvim" "rofi" "waybar" "ranger" "kitty" "dunst" "wallpapers")
 
 for dir in "${dirs[@]}"; do
     echo "$dir"
