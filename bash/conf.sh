@@ -1,4 +1,8 @@
-source ~/.config/git-prompt.sh
+alias vim=nvim
+unalias ls 2>/dev/null
+alias ls=lsd
+
+source ~/.config/bash/git-prompt.sh
 eval "$(fzf --bash)"
 
 PROMPT_COMMAND='PS1_CMD1=$(__git_ps1 " (%s) ")'
