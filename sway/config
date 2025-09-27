@@ -90,6 +90,7 @@ input "type:touchpad" {
     bindsym $mod1+v exec "rofi -modi clipboard:/usr/local/bin/cliphist-rofi-img -show clipboard -show-icons"
     bindsym $mod1+q exec qbittorrent
     bindsym $mod1+w exec "pkill waybar && waybar"
+    bindsym $mod1+s exec "$term -e spotify_player"
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
