@@ -86,7 +86,7 @@ input "type:touchpad" {
     bindsym $mod1+b exec "$term -e bluetui""
     bindsym $mod1+f exec firefox
     bindsym $mod1+Shift+f exec "firefox --private-window"
-    bindsym $mod1+Shift+p exec "firefox -profile $(mktemp -d) --private-window"
+    bindsym $mod1+Ctrl+Shift+f exec "firefox -profile $(mktemp -d) --private-window"
     bindsym $mod1+r exec "$term ranger ~"
     bindsym $mod1+p exec "rofi -modi clipboard:/usr/local/bin/cliphist-rofi-img -show clipboard -show-icons"
     bindsym $mod1+q exec qbittorrent
