@@ -12,6 +12,9 @@ vim.opt.softtabstop = 4
 -- clipboard
 vim.opt.clipboard = "unnamedplus"
 
+-- search ignorecase
+vim.opt.ignorecase = true
+
 -- disable arrow keys
 --vim.keymap.set({ "n", "v" }, "<Up>", "<cmd>:echoe 'NOP!'<CR>")
 --vim.keymap.set({ "n", "v" }, "<Down>", "<cmd>:echoe 'NOP!'<CR>")
