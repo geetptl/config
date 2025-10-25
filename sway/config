@@ -80,6 +80,9 @@ input "type:touchpad" {
     # Power script
     bindsym $mod+Shift+p exec ~/.config/sway/powermenu.sh
 
+    # Power script
+    bindsym $mod+Shift+o exec ~/.config/sway/openvpn.sh
+
     # Applications
     bindsym $mod1+t exec $term
     bindsym $mod1+v exec pavucontrol
