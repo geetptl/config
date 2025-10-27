@@ -93,6 +93,12 @@ input "type:touchpad" {
     bindsym $mod1+w exec "pkill waybar && waybar"
     bindsym $mod1+s exec "$term -e spotify_player"
 
+    # Screenshots
+    bindsym $mod+p exec sh -c 'f=$(grimshot savecopy output); wl-copy < "$f"; gthumb "$f"'
+    bindsym $mod+$mod1+p exec sh -c 'f=$(grimshot savecopy active); wl-copy < "$f"; gthumb "$f"'
+    bindsym $mod+Ctrl+p exec sh -c 'f=$(grimshot savecopy window); wl-copy < "$f"; gthumb "$f"'
+
+
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
@@ -229,9 +235,6 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
     # Special key to take a screenshot with grim
-    bindsym $mod+p       exec grimshot savecopy active
-    bindsym $mod+$mod1+p  exec grimshot savecopy output
-    bindsym $mod+Ctrl+p  exec grimshot savecopy window
 
 #
 # Status Bar:
