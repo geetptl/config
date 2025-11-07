@@ -16,6 +16,8 @@ return {
         vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files', table.unpack(opts) })
         vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers', table.unpack(opts) })
         vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags', table.unpack(opts) })
+        vim.keymap.set('n', '<leader>fd', builtin.lsp_document_symbols, { desc = 'Telescope LSP document symbols', table.unpack(opts) })
+        vim.keymap.set('n', '<leader>fs', builtin.current_buffer_fuzzy_find, { desc = 'Telescope current buffer fuzzy find', table.unpack(opts) })
         vim.keymap.set('n', '<leader>fg', extensions.live_grep_args.live_grep_args, { desc = 'Telescope live grep with args', table.unpack(opts) })
     end
 }
