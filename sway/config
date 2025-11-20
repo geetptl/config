@@ -76,7 +76,7 @@ input "type:touchpad" {
     bindsym $mod+Shift+q kill
 
     # Rofi scripts
-    bindsym $mod1+d exec $menu
+    bindsym $mod1+Space exec $menu
     bindsym $mod1+l exec ~/.config/sway/powermenu.sh
     bindsym $mod1+o exec ~/.config/sway/openvpn.sh
     bindsym $mod1+c exec "rofi -modi clipboard:/usr/local/bin/cliphist-rofi-img -show clipboard -show-icons"
@@ -98,7 +98,7 @@ input "type:touchpad" {
     bindsym $mod+$mod1+p exec sh -c 'f=$(grimshot savecopy active); wl-copy < "$f"; gthumb "$f"'
     bindsym $mod+Ctrl+p exec sh -c 'f=$(grimshot savecopy window); wl-copy < "$f"; gthumb "$f"'
 
-
+    bindsym $mod+n exec ~/.config/sway/toggle-sunset.sh
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
