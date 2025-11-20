@@ -90,8 +90,9 @@ input "type:touchpad" {
     bindsym $mod1+Ctrl+Shift+f exec "firefox -profile $(mktemp -d) --private-window"
     bindsym $mod1+r exec "$term ranger ~"
     bindsym $mod1+q exec qbittorrent
-    bindsym $mod1+w exec "pkill waybar && waybar"
+    bindsym $mod1+Shift+w exec "pkill waybar && waybar"
     bindsym $mod1+s exec "$term -e spotify_player"
+    bindsym $mod1+i exec gthumb
 
     # Screenshots
     bindsym $mod+p exec sh -c 'f=$(grimshot savecopy output); wl-copy < "$f"; gthumb "$f"'
