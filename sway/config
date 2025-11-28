@@ -93,6 +93,7 @@ input "type:touchpad" {
     bindsym $mod1+Shift+w exec "pkill waybar && waybar"
     bindsym $mod1+s exec "$term -e spotify_player"
     bindsym $mod1+i exec gthumb
+    bindsym $mod1+d exec dolphin
 
     # Screenshots
     bindsym $mod+p exec sh -c 'f=$(grimshot savecopy output); wl-copy < "$f"; gthumb "$f"'
