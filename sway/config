@@ -5,7 +5,7 @@
 # Read `man 5 sway` for a complete reference.
 include catppuccin-mocha
 
-font pango:Hack Nerd Font Mono Regular 11
+font pango:GoogleSansCode Nerd Font Mono 11
 gaps inner 5
 default_border pixel 2
 workspace_layout tabbed
@@ -96,9 +96,9 @@ input "type:touchpad" {
     bindsym $mod1+d exec dolphin
 
     # Screenshots
-    bindsym $mod+p exec sh -c 'f=$(grimshot savecopy output); wl-copy < "$f"; gthumb "$f"'
-    bindsym $mod+$mod1+p exec sh -c 'f=$(grimshot savecopy active); wl-copy < "$f"; gthumb "$f"'
-    bindsym $mod+Ctrl+p exec sh -c 'f=$(grimshot savecopy window); wl-copy < "$f"; gthumb "$f"'
+    bindsym $mod+p exec sh -c 'f=$(grimshot savecopy output ~/Pictures/Screenshot-"$(date +%FT%T)".png); wl-copy < "$f"; gthumb "$f"'
+    bindsym $mod+$mod1+p exec sh -c 'f=$(grimshot savecopy active ~/Pictures/Screenshot-"$(date +%FT%T)".png); wl-copy < "$f"; gthumb "$f"'
+    bindsym $mod+Ctrl+p exec sh -c 'f=$(grimshot savecopy window ~/Pictures/Screenshot-"$(date +%FT%T)".png); wl-copy < "$f"; gthumb "$f"'
 
     bindsym $mod+n exec ~/.config/sway/toggle-sunset.sh
     # Drag floating windows by holding down $mod and left mouse button.

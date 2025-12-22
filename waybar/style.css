@@ -1,8 +1,8 @@
 @import "mocha.css";
 
 * {
-    font-family: 'Hack Nerd Font Mono';
-    font-size: 14px;
+    font-family: 'GoogleSansCode Nerd Font Mono';
+    font-size: 15px;
     color: @text;
 }
 
