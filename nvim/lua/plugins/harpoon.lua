@@ -11,8 +11,8 @@ return {
         vim.keymap.set("n", "<leader>hc", function() harpoon:list():clear() end, { desc = "Clear harpoon list" })
 
 		-- Toggle previous & next buffers stored within Harpoon list
-		vim.keymap.set("n", "<leader>hp", function() harpoon:list():prev() end)
-		vim.keymap.set("n", "<leader>hn", function() harpoon:list():next() end)
+		vim.keymap.set("n", "<leader>hp", function() harpoon:list():prev() end, { desc = "Jump to prev in harpoon list" })
+		vim.keymap.set("n", "<leader>hn", function() harpoon:list():next() end, { desc = "Jump to next in harpoon list" })
 
 		-- basic telescope configuration
 		local conf = require("telescope.config").values
