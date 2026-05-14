@@ -15,12 +15,6 @@ vim.opt.clipboard = "unnamedplus"
 -- search ignorecase
 vim.opt.ignorecase = true
 
--- disable arrow keys
---vim.keymap.set({ "n", "v" }, "<Up>", "<cmd>:echoe 'NOP!'<CR>")
---vim.keymap.set({ "n", "v" }, "<Down>", "<cmd>:echoe 'NOP!'<CR>")
---vim.keymap.set({ "n", "v" }, "<Left>", "<cmd>:echoe 'NOP!'<CR>")
---vim.keymap.set({ "n", "v" }, "<Right>", "<cmd>:echoe 'NOP!'<CR>")
-
 -- search
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.opt.incsearch = true
@@ -36,34 +30,22 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 
 -- highlight on yank
 vim.api.nvim_create_autocmd("TextYankPost", {
-    callback = function()
+    callback = function ()
         vim.highlight.on_yank()
     end
 })
 
--- add border to floating previews
-local orig_open_floating_preview = vim.lsp.util.open_floating_preview
-function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
-    opts = opts or {}
-    opts.border = opts.border or "rounded"
-    return orig_open_floating_preview(contents, syntax, opts, ...)
-end
+-- leader
+vim.g.mapleader = " "
 
--- diagnostic line config
-vim.diagnostic.config({
-    virtual_text = {
-        severity = nil,
-        source = "if_many",
-        prefix = "■",
-        spacing = 4,
-    },
-    signs = true,
-    underline = true,
-    update_in_insert = false,
-    severity_sort = true,
-})
+-- reload config
+vim.keymap.set("n", "<leader>cr", function()
+    dofile(vim.env.MYVIMRC)
+    print("Neovim config reloaded")
+end, { desc = "Reload config" })
 
--- lsp shortcuts
-vim.keymap.set("n", "gf", function() vim.lsp.buf.format({ async = true }) end, { desc = "Format current file" })
+-- jump between buffers
+vim.keymap.set("n", "<leader>bn", "<cmd>bnext<CR>")
+vim.keymap.set("n", "<leader>bp", "<cmd>bprev<CR>")
 
-require("config.lazy")
+require("plugins.fff")
